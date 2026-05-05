@@ -15,8 +15,8 @@
 4. Para utilizar el **login**, inmediatamente luego de ejecutar el cliente, ingresar 2; luego ingresar usuario y contraseña previamente agregados. 
 
 ## Capturas
-![Inicio Servidor](../capturas/servidor_inicio.png)
-![Registro Exitoso](../capturas/registro_ok.png)
-![Login Exitoso](../capturas/login_ok.png)
-![Login con Error](../capturas/login_error.png)
-![Tareas Exitoso](../capturas/tareas_ok.png)
+![Inicio Servidor](/capturas/servidor_inicio.png)
+![Registro Exitoso](/capturas/registro_ok.png)
+![Login Exitoso](/capturas/login_ok.png)
+![Login con Error](/capturas/login_error.png)
+![Tareas Exitoso](/capturas/tareas_ok.png)
