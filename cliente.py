@@ -40,4 +40,6 @@ if __name__ == "__main__":
     if op == "1":
         registrar()
     else:
-        login_y_ver_tareas()
+        if op == "2":
+            login_y_ver_tareas()
+        

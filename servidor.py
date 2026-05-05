@@ -17,7 +17,7 @@ def init_db():
     conn = get_db()
     cur = conn.cursor()
 
-    # Tabla de Usuarios
+    # Tabla Usuarios
     cur.execute(
         """
         CREATE TABLE IF NOT EXISTS usuarios (
@@ -28,25 +28,12 @@ def init_db():
         """
     )
 
-    # Tabla de Tareas
-    cur.execute(
-        """
-        CREATE TABLE IF NOT EXISTS tareas (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            usuario_id INTEGER NOT NULL,
-            titulo TEXT NOT NULL,
-            descripcion TEXT,
-            FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-        );
-        """
-    )
-
     conn.commit()
     conn.close()
 
 
 
-# ---------- Helpers de autenticación básica ----------
+# Métodos básicos de Autenticación
 
 def get_basic_auth_credentials():
     """
@@ -77,7 +64,7 @@ def require_basic_auth():
     if row is None:
         return None, unauthorized_response()
 
-    if not check_password_hash(row["password_hash"], password):
+    if not check_password_hash(row["password"], password):
         return None, unauthorized_response()
 
     return row, None
@@ -89,7 +76,7 @@ def unauthorized_response():
     return resp
 
 
-# ---------- Endpoints ----------
+# Endpoints 
 
 @app.route("/registro", methods=["POST"])
 def registro():
@@ -171,7 +158,7 @@ def tareas():
     """
     return html, 200, {"Content-Type": "text/html; charset=utf-8"}
 
-
+# Ejecución
 if __name__ == "__main__":
     init_db()
     app.run(debug=True)
