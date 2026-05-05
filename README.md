@@ -5,8 +5,8 @@
 - Werkzeug
 
 ### Instalación
-pip install Flask
-pip install werkzeug (Instalando Flask puede no ser necesario este paso)
+* pip install Flask
+* pip install werkzeug (Instalando Flask puede no ser necesario este paso)
 
 ## Instrucciones
 1. Ejecutar en una terminal el archivo **servidor** (py servidor.py).
